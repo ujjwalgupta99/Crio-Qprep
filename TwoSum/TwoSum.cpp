@@ -7,8 +7,25 @@ using namespace std;
 class TwoSum {
 public:
     // Implement your solution by completing the below function	
+	//simple linear time soln O(N), revise C++ STL once
     vector<int> twoSum(vector<int>& nums, int target) {
-        vector<int> v(2,0);
+        vector<int> v;
+		map<int,int> m;
+		//could have done simply by 'auto' but meh
+		map<int,int>::iterator it;
+
+		for(int i=0;i<(int)nums.size();i++){
+
+			int req = target - nums[i];
+			it = m.find(req);
+
+			if(it != m.end()){
+				v.push_back(it->second);
+				v.push_back(i);
+			}
+			// Key      value 
+			m[nums[i]] = i;
+		}
 
         return v;
     }
