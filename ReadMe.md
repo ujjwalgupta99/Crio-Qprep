@@ -1,0 +1,2 @@
+This repository contains solutions of some standard problems that are present in leetcode or interviewbit or any other common site used to practice coding.
+There is no limit of language. Any language can be used. Must be a valid solution which is already tested and submitted on the site
